@@ -105,7 +105,7 @@
     </section>
 
     <!-- Oferta / Servicios -->
-    <section id="servicios" class="py-24 bg-white relative">
+    <section id="servicios" class="py-24 bg-white relative border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">La solución perfecta para tu negocio</h2>
@@ -157,7 +157,7 @@
     </section>
 
     <!-- Sobre Mí -->
-    <section id="sobre-mi" class="py-24 bg-slate-50">
+    <section id="sobre-mi" class="py-24 bg-slate-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-10 lg:mb-0">
@@ -186,6 +186,68 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Experiencia por sectores -->
+    <section class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Experiencia en tu sector</h2>
+                <p class="mt-4 text-lg text-slate-600">Me adapto a las necesidades específicas de cada tipo de negocio local.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Peluquerías -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 11-4.243 4.243 3 3 0 014.243-4.243zm0-5.758a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Peluquerías y Estética</h3>
+                    <p class="text-slate-600">Páginas que muestran tus trabajos y facilitan que los clientes te encuentren y contacten.</p>
+                </div>
+                
+                <!-- Talleres -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Talleres Mecánicos</h3>
+                    <p class="text-slate-600">Visibilidad online para que los conductores locales sepan dónde estás y qué servicios ofreces.</p>
+                </div>
+                
+                <!-- Servicios a domicilio -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Servicios a Domicilio</h3>
+                    <p class="text-slate-600">Reformas, limpieza, fontanería o electricistas. Tu teléfono siempre a un clic para clientes urgentes.</p>
+                </div>
+                
+                <!-- Otros negocios -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Comercios y Hostelería</h3>
+                    <p class="text-slate-600">Restaurantes, cafeterías o tiendas de barrio que quieren destacar frente a la competencia.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-indigo-50 p-8 rounded-3xl border border-indigo-100 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-indigo-900 font-medium text-lg mb-6 md:mb-0 md:mr-8">He ayudado a diversos sectores a dar el salto digital con una web clara y funcional.</p>
+                <a href="#contacto" class="whitespace-nowrap bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-colors">Ver si encajamos</a>
             </div>
         </div>
     </section>
