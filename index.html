@@ -3,462 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo Pérez | Diseño Web para Autónomos y Empresas</title>
+    
+    <!-- SEO TÍTULO Y DESCRIPCIÓN OPTIMIZADA AL 100% -->
+    <title>Diseño Web para Autónomos y Pymes | Hugo Pérez 200€/año</title>
+    <meta name="description" content="¿Eres autónomo? Consigue tu página web profesional por solo 200€ al año. Incluye hosting, dominio .es, SEO local y soporte técnico. Especialista en Pymes, talleres de pintura y servicios locales.">
+    <meta name="keywords" content="diseño web autónomos, páginas web económicas, seo local para pymes, web para peluquerías, web para talleres de pintura, chapa y pintura, reformas, fontaneros, diseñador web españa">
+    <link rel="canonical" href="https://hugoperez.dev/">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH / REDES SOCIALES -->
+    <meta property="og:title" content="Web Profesional para Autónomos por 200€/año | Hugo Pérez">
+    <meta property="og:description" content="Tu negocio online con todo incluido: Diseño, hosting, dominio y soporte. Sin sorpresas ni cuotas mensuales. Especialista en talleres de pintura.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hugoperez.dev/">
+    <meta property="og:image" content="https://i.postimg.cc/MGznBHP2/Composiciones.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- DATOS ESTRUCTURADOS JSON-LD (SEO LOCAL Y PROFESIONAL) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Hugo Pérez - Diseño Web Nacional",
+      "image": "https://i.postimg.cc/MGznBHP2/Composiciones.jpg",
+      "@id": "https://hugoperez.dev/",
+      "url": "https://hugoperez.dev/",
+      "telephone": "+34640230147",
+      "priceRange": "200€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Servicio Nacional",
+        "addressLocality": "España",
+        "addressRegion": "España",
+        "postalCode": "50001",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.416775,
+        "longitude": -3.703790
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animaciones personalizadas */
         @keyframes fade-in-up {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out forwards;
-        }
-        .modal-enter {
-            opacity: 0; transform: scale(0.95); transition: all 0.3s ease-out;
-        }
-        .modal-enter-active {
-            opacity: 1; transform: scale(1);
-        }
-        /* Animación para el botón de WhatsApp */
+        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+        .animate-pulse-green { animation: pulse-green 2s infinite; }
         @keyframes pulse-green {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
             70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
-        .animate-pulse-green {
-            animation: pulse-green 2s infinite;
+        
+        .faq-item input:checked ~ .faq-content {
+            max-height: 500px;
+            padding-top: 1rem;
+            opacity: 1;
         }
+        .faq-item input:checked ~ .faq-title svg {
+            transform: rotate(180deg);
+        }
+        
+        .text-balance { text-wrap: balance; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/34640230147?text=Hola%20Hugo,%20he%20visto%20tu%20web%20y%20me%20gustaría%20información%20sobre%20el%20Plan%20Negocio" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 animate-pulse-green flex items-center justify-center"
-       aria-label="Contactar por WhatsApp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/34640230147?text=Hola%20Hugo,%20quiero%20información%20sobre%20una%20web%20para%20mi%20negocio" 
+       target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp con Hugo Pérez"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl animate-pulse-green flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
 
-    <!-- Navegación -->
-    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#inicio" class="text-2xl font-bold text-indigo-600 tracking-tight">Hugo<span class="text-slate-800">Pérez</span>.</a>
-                </div>
-                <!-- Menú Desktop -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Inicio</a>
-                    <a href="#servicios" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Servicios</a>
-                    <a href="#sobre-mi" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Sobre Mí</a>
-                    <a href="#contacto" class="bg-indigo-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg">Contacto</a>
-                </div>
-                <!-- Botón Menú Móvil -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
-                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 rounded-md">Inicio</a>
-                <a href="#servicios" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 rounded-md">Servicios</a>
-                <a href="#sobre-mi" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 rounded-md">Sobre Mí</a>
-                <a href="#contacto" class="block px-3 py-2 text-base font-medium text-indigo-600 font-bold hover:bg-slate-50 rounded-md">Contacto</a>
+    <!-- Nav -->
+    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-md shadow-sm border-b" role="navigation">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
+            <a href="#inicio" class="text-2xl font-bold text-indigo-600 tracking-tight" aria-label="Hugo Pérez Inicio">Hugo<span class="text-slate-800">Pérez</span>.</a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#inicio" title="Ir al inicio de la página" class="hover:text-indigo-600 transition-colors">Inicio</a>
+                <a href="#servicios" title="Ver servicios de diseño web" class="hover:text-indigo-600 transition-colors">Servicio</a>
+                <a href="#sectores" title="Sectores especializados en digitalización" class="hover:text-indigo-600 transition-colors">Sectores</a>
+                <a href="#contacto" title="Pedir presupuesto sin compromiso" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all shadow-md">Contacto</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-in-up">
-            <span class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-indigo-700 font-semibold text-sm mb-6 border border-indigo-200">
-                Especialista en Autónomos y Pymes (S.L.)
-            </span>
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
-                Tu negocio en internet por <br class="hidden sm:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">200€ al año</span>. Sin sorpresas.
+    <header id="inicio" class="relative pt-32 pb-20 lg:pt-48 bg-gradient-to-b from-indigo-50/50 to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Diseño Web para <span class="text-indigo-600 text-nowrap">Autónomos y Pymes</span>
             </h1>
-            <p class="mt-4 text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Diseño web profesional, rápido y optimizado. Olvídate de los mantenimientos mensuales abusivos. Pago único anual y tu web siempre lista para vender.
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed text-balance">
+                Consigue tu página web profesional por <strong>solo 200€ al año</strong>. Todo incluido: diseño, hosting SSD de alta velocidad y SEO local especializado en captar clientes para tu negocio.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contacto" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1">
-                    Solicitar mi web ahora
-                </a>
-                <a href="#servicios" class="bg-white text-slate-700 border border-slate-300 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:text-indigo-600 transition-all shadow-sm">
-                    Ver qué incluye
-                </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contacto" title="Contratar diseño web profesional" class="bg-indigo-600 text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-indigo-700 hover:-translate-y-1 transition-all">Empezar mi web hoy</a>
+                <a href="#sectores" title="Ver ejemplos de webs por sector" class="bg-white border-2 border-slate-200 px-10 py-5 rounded-full font-bold flex items-center hover:bg-slate-50 transition-all text-slate-700">Ver sectores especializados</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Oferta / Servicios -->
-    <section id="servicios" class="py-24 bg-white relative border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">La solución perfecta para tu negocio</h2>
-                <p class="mt-4 text-lg text-slate-600">Transparencia total. Un único plan con todo lo que necesitas para tener presencia online.</p>
-            </div>
-
-            <div class="max-w-lg mx-auto bg-slate-50 rounded-3xl shadow-xl border border-slate-200 overflow-hidden transform transition-all hover:scale-105 duration-300">
-                <div class="bg-indigo-600 p-8 text-center text-white">
-                    <h3 class="text-2xl font-bold mb-2">Plan Negocio</h3>
-                    <div class="flex justify-center items-baseline mb-4">
-                        <span class="text-5xl font-extrabold">200€</span>
-                        <span class="text-xl opacity-80 ml-1">/año</span>
-                    </div>
-                    <p class="font-medium text-indigo-100 bg-indigo-700/50 py-1.5 px-4 rounded-full inline-block">Sin cuotas mensuales</p>
+    <main>
+        <!-- Servicios -->
+        <section id="servicios" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-4 text-balance">Servicios Web Integrales para el Autónomo de Hoy</h2>
+                    <p class="text-lg text-slate-600 font-medium italic">Olvídate de líos técnicos. Un único pago anual de 200€ por una web que funciona.</p>
+                </header>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow group">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Estrategia SEO Local</h3>
+                        <p class="text-slate-600 leading-relaxed">Optimizamos tu contenido para que clientes en tu zona te encuentren. Ideal para servicios a domicilio y negocios físicos.</p>
+                    </article>
+                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow group">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Seguridad Garantizada</h3>
+                        <p class="text-slate-600 leading-relaxed">Instalamos certificados SSL y cumplimos con la RGPD española, protegiendo a tus clientes y tu reputación online.</p>
+                    </article>
+                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow group">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Velocidad y Conversión</h3>
+                        <p class="text-slate-600 leading-relaxed">Páginas web ligeras que cargan en menos de 1 segundo, reduciendo la tasa de rebote y aumentando tus contactos.</p>
+                    </article>
                 </div>
-                <div class="p-8">
-                    <ul class="space-y-4">
+            </div>
+        </section>
+
+        <!-- Sectores -->
+        <section id="sectores" class="py-24 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Experto en Digitalización de Pequeños Negocios</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">He desarrollado soluciones específicas para los sectores que mueven la economía local en España.</p>
+                </header>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <article class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
+                        <h3 class="font-bold text-xl mb-3 text-white">Gremios y Oficios</h3>
+                        <p class="text-slate-400">Webs optimizadas para <strong>fontaneros, electricistas y reformas</strong>. Enfocadas en el botón de llamada directa.</p>
+                    </article>
+                    <article class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
+                        <h3 class="font-bold text-xl mb-3 text-white">Estética y Salud</h3>
+                        <p class="text-slate-400">Para <strong>peluquerías, fisioterapeutas y centros de belleza</strong>. Visuales, elegantes y con cita por WhatsApp.</p>
+                    </article>
+                    <article class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
+                        <h3 class="font-bold text-xl mb-3 text-white">Mundo del Motor</h3>
+                        <p class="text-slate-400">Digitaliza tu <strong>taller de mecánica o chapa y pintura</strong>. Resaltamos tus acabados y servicios para captar clientes en tu zona.</p>
+                    </article>
+                    <article class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
+                        <h3 class="font-bold text-xl mb-3 text-white">Hostelería Local</h3>
+                        <p class="text-slate-400"><strong>Restaurantes, cafeterías y tiendas de alimentación</strong> que necesitan mostrar su oferta y permitir reservas rápidas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <img src="https://i.postimg.cc/MGznBHP2/Composiciones.jpg" 
+                         alt="Hugo Pérez - Especialista en diseño web económico para autónomos y pymes en España" 
+                         title="Hugo Pérez - Especialista en diseño web"
+                         class="rounded-[2.5rem] shadow-2xl w-full"
+                         loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl font-bold mb-8 text-slate-900">Hugo Pérez: Tu socio digital sin cuotas mensuales</h2>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed text-balance">
+                        Mi objetivo es que cualquier profesional autónomo o Pyme en España tenga acceso a una web de alto nivel sin pagar los miles de euros que piden las agencias.
+                    </p>
+                    <ul class="space-y-6" role="list">
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700">Diseño web a medida y profesional</span>
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4 mt-1 text-indigo-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Resultados Medibles</h4>
+                                <p class="text-slate-500">Diseñamos para que los clientes te encuentren y realicen la acción que necesitas: llamar o pedir cita en tu negocio.</p>
+                            </div>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700">Alojamiento (Hosting) de alta velocidad</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700">Adaptada a móviles y tablets (Responsive)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700 font-semibold">Textos legales básicos incluidos (RGPD/Cookies)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700">Botón directo a WhatsApp / Formulario</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-slate-700">Soporte técnico directo por email</span>
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4 mt-1 text-indigo-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Trato Directo</h4>
+                                <p class="text-slate-500">Sin tecnicismos innecesarios, solo soluciones reales que ayudan a crecer a tu negocio desde el primer día.</p>
+                            </div>
                         </li>
                     </ul>
-                    <div class="mt-8">
-                        <a href="#contacto" class="block w-full bg-indigo-50 text-indigo-700 font-bold text-center py-3 px-4 rounded-xl hover:bg-indigo-100 transition-colors">Contratar Plan</a>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sobre Mí -->
-    <section id="sobre-mi" class="py-24 bg-slate-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div class="mb-10 lg:mb-0">
-                    <div class="aspect-square md:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl relative">
-                        <img src="https://i.postimg.cc/MGznBHP2/Composiciones.jpg" alt="Hugo Pérez - Programador Web en Zaragoza" class="absolute inset-0 w-full h-full object-cover">
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-6">Hola, soy Hugo Pérez</h2>
-                    <div class="space-y-6 text-lg text-slate-600">
-                        <p>Tengo 21 años, soy de <strong>Zaragoza</strong> y soy un apasionado del desarrollo web y la tecnología.</p>
-                        <p>A lo largo de mi trayectoria, me he dado cuenta de un gran problema: muchas agencias cobran a los autónomos y pequeñas empresas (S.L.) cuotas de mantenimiento mensuales altísimas por webs que apenas requieren cambios.</p>
-                        <p>Por eso decidí crear este servicio. Mi objetivo es que cualquier negocio pueda tener una presencia digital profesional, rápida y legalmente impecable sin tener que atarse a mensualidades que merman sus beneficios.</p>
-                        <p class="font-medium text-slate-800">Tú te centras en tu negocio, yo me encargo de que tu web funcione a la perfección, por solo 200€ al año.</p>
-                    </div>
-                    <div class="mt-10">
-                        <div class="flex items-center space-x-6 text-slate-500">
-                            <div class="flex items-center">
-                                <svg class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                Zaragoza, España
-                            </div>
-                            <div class="flex items-center">
-                                <svg class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                                Desarrollador Web
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: Experiencia por sectores -->
-    <section class="py-24 bg-white border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Experiencia en tu sector</h2>
-                <p class="mt-4 text-lg text-slate-600">Me adapto a las necesidades específicas de cada tipo de negocio local.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Peluquerías -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 11-4.243 4.243 3 3 0 014.243-4.243zm0-5.758a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Peluquerías y Estética</h3>
-                    <p class="text-slate-600">Páginas que muestran tus trabajos y facilitan que los clientes te encuentren y contacten.</p>
-                </div>
-                
-                <!-- Talleres -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Talleres Mecánicos</h3>
-                    <p class="text-slate-600">Visibilidad online para que los conductores locales sepan dónde estás y qué servicios ofreces.</p>
-                </div>
-                
-                <!-- Servicios a domicilio -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Servicios a Domicilio</h3>
-                    <p class="text-slate-600">Reformas, limpieza, fontanería o electricistas. Tu teléfono siempre a un clic para clientes urgentes.</p>
-                </div>
-                
-                <!-- Otros negocios -->
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors group">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Comercios y Hostelería</h3>
-                    <p class="text-slate-600">Restaurantes, cafeterías o tiendas de barrio que quieren destacar frente a la competencia.</p>
-                </div>
-            </div>
-            
-            <div class="mt-16 bg-indigo-50 p-8 rounded-3xl border border-indigo-100 flex flex-col md:flex-row items-center justify-between">
-                <p class="text-indigo-900 font-medium text-lg mb-6 md:mb-0 md:mr-8">He ayudado a diversos sectores a dar el salto digital con una web clara y funcional.</p>
-                <a href="#contacto" class="whitespace-nowrap bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-colors">Ver si encajamos</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Contacto -->
-    <section id="contacto" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-4">¿Listo para impulsar tu negocio?</h2>
-            <p class="text-lg text-slate-600 mb-10">Escríbeme por aquí o por WhatsApp si prefieres algo más directo.</p>
-            
-            <form id="contact-form" action="https://formspree.io/f/meepdqbe" method="POST" class="bg-slate-50 p-8 rounded-3xl shadow-md border border-slate-100 text-left">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label for="nombre" class="block text-sm font-medium text-slate-700 mb-2">Nombre completo / Empresa</label>
-                        <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all">
+    <section id="contacto" class="py-24 bg-indigo-600">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Inicia tu proyecto digital hoy mismo</h2>
+                <p class="text-slate-500 mb-8 font-medium text-center">Cuéntame qué necesitas y nos pondremos en marcha.</p>
+                
+                <form action="https://formspree.io/f/meepdqbe" method="POST" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" name="name" required class="p-4 bg-slate-50 border-2 border-transparent focus:border-indigo-500 rounded-xl outline-none transition-all" placeholder="Tu Nombre">
+                        <input type="email" name="email" required class="p-4 bg-slate-50 border-2 border-transparent focus:border-indigo-500 rounded-xl outline-none transition-all" placeholder="Tu Email">
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Correo electrónico</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all">
+                    <input type="text" name="business" placeholder="Tu Negocio (ej: Fontanería o Peluquería)" class="w-full p-4 bg-slate-50 border-2 border-transparent focus:border-indigo-500 rounded-xl outline-none transition-all">
+                    <textarea name="message" rows="4" required class="w-full p-4 bg-slate-50 border-2 border-transparent focus:border-indigo-500 rounded-xl outline-none transition-all" placeholder="¿Cómo puedo ayudarte?"></textarea>
+                    
+                    <div class="flex items-center space-x-2 py-2 text-slate-500">
+                        <input type="checkbox" id="consent" required class="w-4 h-4 rounded text-indigo-600 cursor-pointer">
+                        <label for="consent" class="text-xs cursor-pointer">He leído y acepto la <button type="button" onclick="openLegalModal('privacidad')" class="underline font-bold text-slate-700">política de privacidad</button>.</label>
                     </div>
-                </div>
-                <div class="mb-6">
-                    <label for="mensaje" class="block text-sm font-medium text-slate-700 mb-2">¿A qué se dedica tu negocio y qué necesitas?</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"></textarea>
-                </div>
-                <div class="mb-6 flex items-start">
-                    <div class="flex items-center h-5">
-                        <input id="privacidad" type="checkbox" required class="w-4 h-4 text-indigo-600 bg-white border-slate-300 rounded focus:ring-indigo-500">
-                    </div>
-                    <div class="ml-3 text-sm">
-                        <label for="privacidad" class="font-medium text-slate-600">He leído y acepto la <button type="button" onclick="openLegalModal('privacidad')" class="text-indigo-600 underline hover:text-indigo-800">Política de Privacidad</button>.</label>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button type="submit" id="form-submit" class="flex-1 bg-indigo-600 text-white font-bold py-4 px-8 rounded-xl hover:bg-indigo-700 transition-colors shadow-lg flex justify-center items-center">
-                        <span>Enviar mensaje</span>
-                    </button>
-                    <a href="https://wa.me/34640230147?text=Hola%20Hugo,%20he%20visto%20tu%20web%20y%20me%20gustaría%20información%20sobre%20el%20Plan%20Negocio" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       class="flex-1 bg-green-500 text-white font-bold py-4 px-8 rounded-xl hover:bg-green-600 transition-colors shadow-lg flex justify-center items-center">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                        WhatsApp Directo
-                    </a>
-                </div>
-                <div id="form-status" class="hidden mt-4 p-4 rounded-xl text-center font-medium"></div>
-            </form>
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-5 rounded-xl hover:bg-indigo-700 shadow-lg transition-all text-lg uppercase tracking-wider">Enviar Solicitud</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <span class="text-2xl font-bold text-white tracking-tight">HugoPérez.</span>
-                    <p class="mt-2 text-sm">Desarrollo web en Zaragoza para toda España.</p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-6 text-sm">
-                    <button onclick="openLegalModal('aviso-legal')" class="hover:text-white transition-colors">Aviso Legal</button>
-                    <button onclick="openLegalModal('privacidad')" class="hover:text-white transition-colors">Política de Privacidad</button>
-                    <button onclick="openLegalModal('cookies')" class="hover:text-white transition-colors">Política de Cookies</button>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-sm flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2026 Hugo Pérez. Todos los derechos reservados.</p>
-                <p class="mt-2 md:mt-0 text-slate-500">Precio de 200€/año (impuestos no incluidos).</p>
-            </div>
+    <footer class="bg-slate-950 text-slate-500 py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-white font-bold mb-8 text-xl tracking-tight italic">Hugo Pérez <span class="text-indigo-500">Diseño Web</span>.</p>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-sm font-semibold uppercase tracking-widest">
+                <button onclick="openLegalModal('aviso-legal')" title="Ver Aviso Legal" class="hover:text-white transition-colors">Aviso Legal</button>
+                <button onclick="openLegalModal('privacidad')" title="Ver Política de Privacidad" class="hover:text-white transition-colors">Privacidad</button>
+                <button onclick="openLegalModal('cookies')" title="Ver Política de Cookies" class="hover:text-white transition-colors">Cookies</button>
+            </nav>
+            <p class="text-xs">© 2026 Hugo Pérez. Especialista en diseño web para autónomos y Pymes en España. <br>Todo incluido por solo 200€ al año.</p>
         </div>
     </footer>
 
-    <!-- Banner de Cookies -->
-    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5 z-50 transition-transform duration-500 transform translate-y-0">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="p-4 rounded-2xl bg-slate-900 shadow-2xl border border-slate-700 flex flex-col sm:flex-row items-center justify-between">
-                <div class="flex-1 pr-0 sm:pr-8 mb-4 sm:mb-0">
-                    <p class="text-sm font-medium text-slate-200">
-                        Utilizamos cookies propias y de terceros para analizar nuestros servicios. 
-                        <button onclick="openLegalModal('cookies')" class="text-indigo-400 underline hover:text-indigo-300 ml-1">Más información</button>.
-                    </p>
-                </div>
-                <div class="flex-shrink-0 flex gap-2">
-                    <button id="btn-reject-cookies" class="px-4 py-2 border border-slate-600 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800">Rechazar</button>
-                    <button id="btn-accept-cookies" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-900 bg-indigo-400 hover:bg-indigo-300">Aceptar todas</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para Textos Legales -->
-    <div id="legal-modal" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-slate-900 bg-opacity-75 backdrop-blur-sm" id="modal-backdrop"></div>
-        <div class="fixed inset-0 z-10 overflow-y-auto">
-            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-3xl modal-enter" id="modal-panel">
-                    <div class="bg-white px-4 pb-4 pt-5 sm:p-8 sm:pb-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-4" id="modal-title">Título Legal</h3>
-                        <div class="mt-2 text-sm text-slate-600 space-y-4 max-h-[60vh] overflow-y-auto pr-2" id="modal-content"></div>
-                    </div>
-                    <div class="bg-slate-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="button" onclick="closeLegalModal()" class="inline-flex w-full justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">Entendido</button>
-                    </div>
-                </div>
-            </div>
+    <!-- Modal Legal -->
+    <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-6">
+        <div class="bg-white rounded-[2rem] max-w-3xl w-full p-10 max-h-[85vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors" aria-label="Cerrar ventana">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 id="modal-title" class="text-3xl font-bold mb-6 text-slate-900 border-b pb-4"></h3>
+            <div id="modal-content" class="text-slate-600 leading-relaxed text-lg"></div>
         </div>
     </div>
 
     <script>
-        // Lógica del Formulario (Formspree con AJAX para no recargar)
-        const form = document.getElementById("contact-form");
-        
-        async function handleSubmit(event) {
-          event.preventDefault();
-          const status = document.getElementById("form-status");
-          const submitBtn = document.getElementById("form-submit");
-          const data = new FormData(event.target);
-          
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = 'Enviando...';
-
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-          }).then(response => {
-            if (response.ok) {
-              status.innerHTML = "¡Gracias! Tu mensaje ha sido enviado correctamente. Te contactaré pronto.";
-              status.classList.remove('hidden', 'bg-red-100', 'text-red-700');
-              status.classList.add('bg-green-100', 'text-green-700');
-              form.reset();
-              submitBtn.innerHTML = 'Mensaje Enviado';
-              submitBtn.classList.add('bg-green-600');
-            } else {
-              response.json().then(data => {
-                if (Object.hasOwn(data, 'errors')) {
-                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                } else {
-                  status.innerHTML = "Oops! Hubo un problema al enviar el formulario.";
-                }
-                status.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-                status.classList.add('bg-red-100', 'text-red-700');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Reintentar Envío';
-              })
-            }
-          }).catch(error => {
-            status.innerHTML = "Error de conexión. Por favor, inténtalo de nuevo.";
-            status.classList.remove('hidden');
-            status.classList.add('bg-red-100', 'text-red-700');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Reintentar Envío';
-          });
-        }
-        form.addEventListener("submit", handleSubmit)
-
-        // Menú Móvil
-        const btnMenu = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        btnMenu.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-        // Cookies
-        const cookieBanner = document.getElementById('cookie-banner');
-        if (localStorage.getItem('cookies_accepted')) cookieBanner.style.display = 'none';
-
-        const hideBanner = () => {
-            cookieBanner.classList.add('translate-y-full');
-            setTimeout(() => cookieBanner.style.display = 'none', 500);
-        };
-
-        document.getElementById('btn-accept-cookies').onclick = () => { localStorage.setItem('cookies_accepted', 'all'); hideBanner(); };
-        document.getElementById('btn-reject-cookies').onclick = () => { localStorage.setItem('cookies_accepted', 'none'); hideBanner(); };
-
-        // Modal Legal
         const legalTexts = {
-            'aviso-legal': { 
-                title: 'Aviso Legal', 
-                content: '<p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información, se informa que Hugo Pérez es el titular de este sitio web. Ubicación: Zaragoza, España.</p>' 
-            },
-            'privacidad': { 
-                title: 'Política de Privacidad', 
-                content: '<p>Los datos recogidos a través del formulario de contacto serán utilizados únicamente para responder a su solicitud de información sobre nuestros servicios de desarrollo web. No se cederán datos a terceros salvo obligación legal.</p>' 
-            },
-            'cookies': { 
-                title: 'Política de Cookies', 
-                content: '<p>Utilizamos cookies técnicas necesarias para el funcionamiento y cookies de análisis (Google Analytics) para entender cómo llegan los usuarios a nuestra web.</p>' 
-            }
+            'aviso-legal': { title: 'Aviso Legal', content: 'Hugo Pérez, con domicilio profesional en España, informa que es el titular del sitio web. El servicio de diseño web para autónomos está regulado bajo la normativa LSSI-CE.' },
+            'privacidad': { title: 'Política de Privacidad', content: 'En cumplimiento del RGPD, sus datos personales serán tratados exclusivamente para responder a su consulta. Puede ejercer sus derechos de acceso, rectificación y supresión contactándome directamente.' },
+            'cookies': { title: 'Política de Cookies', content: 'Utilizamos cookies técnicas necesarias para la navegación y analíticas anónimas para mejorar el rendimiento del sitio web.' }
         };
-
-        window.openLegalModal = (type) => {
-            const data = legalTexts[type];
-            if(data) {
-                document.getElementById('modal-title').innerText = data.title;
-                document.getElementById('modal-content').innerHTML = data.content;
-                document.getElementById('legal-modal').classList.remove('hidden');
-                setTimeout(() => document.getElementById('modal-panel').classList.add('modal-enter-active'), 10);
-                document.body.style.overflow = 'hidden';
-            }
-        };
-
-        window.closeLegalModal = () => {
-            document.getElementById('modal-panel').classList.remove('modal-enter-active');
-            setTimeout(() => {
-                document.getElementById('legal-modal').classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }, 300);
-        };
-        document.getElementById('modal-backdrop').onclick = closeLegalModal;
+        function openLegalModal(type) {
+            document.getElementById('modal-title').innerText = legalTexts[type].title;
+            document.getElementById('modal-content').innerText = legalTexts[type].content;
+            document.getElementById('legal-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLegalModal() { 
+            document.getElementById('legal-modal').classList.add('hidden'); 
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
