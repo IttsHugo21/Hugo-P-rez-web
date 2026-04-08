@@ -104,10 +104,12 @@
     <!-- Hero Section -->
     <header id="inicio" class="relative pt-32 pb-20 lg:pt-48 bg-gradient-to-b from-indigo-50/50 to-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 relative z-10 text-center animate-fade-in-up">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
-                Diseño Web para <span class="text-indigo-600 text-nowrap">Autónomos y Pymes</span>
+            <!-- Título estructurado para PC y Móvil -->
+            <h1 class="font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+                <span class="block text-4xl md:text-6xl lg:text-7xl mb-2">Diseño Web para</span>
+                <span class="text-indigo-600 text-3xl md:text-5xl lg:text-6xl block">Autónomos y Pymes</span>
             </h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed text-balance">
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed text-balance">
                 Consigue tu página web profesional por <strong>solo 200€ al año</strong>. Todo incluido: diseño, hosting SSD de alta velocidad y SEO local especializado en captar clientes para tu negocio.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
@@ -258,7 +260,7 @@
     </footer>
 
     <!-- Modal Legal -->
-    <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-6">
+    <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-6">
         <div class="bg-white rounded-[2rem] max-w-3xl w-full p-10 max-h-[85vh] overflow-y-auto shadow-2xl relative">
             <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors" aria-label="Cerrar ventana">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
