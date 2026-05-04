@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,242 +10,179 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-FX5FCRLHKG');
     </script>
 
-    <!-- SEO TÍTULO Y DESCRIPCIÓN TÉCNICA -->
-    <title>Diseño Web para Autónomos y Pymes | WebParaAutónomos 200€/año</title>
-    <meta name="description" content="Diseño de páginas web para autónomos por 200€/año. Incluye hosting SSD, dominio .es, SEO local y carga ultrarrápida. La solución económica para Pymes en Zaragoza y España.">
-    <meta name="keywords" content="diseño web autónomos, web económica pymes, seo local zaragoza, paginas web baratas, desarrollo web autonomos, webparaautónomos">
+    <!-- SEO TÍTULO Y DESCRIPCIÓN -->
+    <title>Web para tu negocio desde 700€ | WebParaAutónomos</title>
+    <meta name="description" content="Diseño de páginas web profesionales desde 700€. Sin cuotas mensuales ocultas. Incluye dominio, hosting y mantenimiento técnico.">
     <meta name="author" content="Hugo Pérez">
     <link rel="canonical" href="https://webparautonomos.es/">
     <meta name="robots" content="index, follow">
 
-    <!-- OPEN GRAPH (Optimización para compartir) -->
-    <meta property="og:title" content="Web Profesional para Autónomos | 200€ al año">
-    <meta property="og:description" content="Todo lo que tu negocio necesita para estar en Google: Diseño, Hosting y Dominio. Sin cuotas mensuales.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://webparautonomos.es/">
-    <meta property="og:image" content="https://i.postimg.cc/MGznBHP2/Composiciones.jpg">
-    <meta property="og:locale" content="es_ES">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- DATOS ESTRUCTURADOS (Local Business) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "WebParaAutónomos - Hugo Pérez",
-      "image": "https://i.postimg.cc/MGznBHP2/Composiciones.jpg",
-      "@id": "https://webparautonomos.es/",
-      "url": "https://webparautonomos.es/",
-      "telephone": "+34640230147",
-      "priceRange": "200€",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Servicio Nacional",
-        "addressLocality": "Zaragoza",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.6488,
-        "longitude": -0.8891
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      }
-    }
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes fade-in-up {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        /* Tipografía Serif: Sensación de lectura de periódico o carta clásica */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.8;
+            font-size: 1.15rem; /* Lectura muy cómoda */
         }
-        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
-        .animate-pulse-green { animation: pulse-green 2s infinite; }
-        @keyframes pulse-green {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+
+        p { margin-bottom: 1.75rem; }
+        
+        .cta-link {
+            color: #b91c1c; /* Rojo sangre, muy directo */
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: bold;
+            transition: all 0.2s;
         }
-        .text-balance { text-wrap: balance; }
+        .cta-link:hover { color: #000; }
+
+        /* Estilos básicos para modales legales obligatorios */
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); }
+        .modal-active { display: flex; align-items: center; justify-content: center; }
+        
+        /* Eliminar scrollbar en modales si es necesario */
+        .modal-content { max-width: 700px; padding: 2rem; overflow-y: auto; max-height: 90vh; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="antialiased selection:bg-red-100 selection:text-red-900">
 
-    <!-- Botón WhatsApp (Conversión SEO) -->
-    <a href="https://wa.me/34640230147?text=Hola,%20quiero%20información%20sobre%20una%20web%20para%20mi%20negocio" 
-       target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"
-       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl animate-pulse-green flex items-center justify-center">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    </a>
+    <!-- Banner de Cookies (Diseño minimalista e informal) -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-white border-t border-black p-4 z-[60] text-sm text-center font-sans">
+        Uso cookies de Google para saber si alguien lee esto. Si te quedas, asumo que te parece bien. 
+        <button onclick="openModal('modal-cookies')" class="underline ml-2">Detalles</button>.
+        <button onclick="closeCookies()" class="bg-black text-white px-6 py-1 ml-4 font-bold uppercase tracking-tighter">Aceptar</button>
+    </div>
 
-    <!-- Header / Nav -->
-    <nav class="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-sm border-b" role="navigation">
-        <div class="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
-            <a href="#inicio" class="text-2xl font-bold text-slate-800 tracking-tight" aria-label="WebParaAutónomos Zaragoza">WebPara<span class="text-indigo-600">Autónomos</span></a>
-            <div class="hidden md:flex space-x-8 items-center font-medium">
-                <a href="#inicio" class="hover:text-indigo-600 transition-colors">Inicio</a>
-                <a href="#servicios" class="hover:text-indigo-600 transition-colors">Ventajas</a>
-                <a href="#sectores" class="hover:text-indigo-600 transition-colors">Sectores</a>
-                <a href="#contacto" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all shadow-md">Consultar</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="inicio" class="relative pt-32 pb-20 lg:pt-48 bg-gradient-to-b from-indigo-50/50 to-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center animate-fade-in-up">
-            <h1 class="font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
-                <span class="block text-4xl md:text-6xl lg:text-7xl mb-2">Diseño Web para</span>
-                <span class="text-indigo-600 text-3xl md:text-5xl lg:text-6xl block">Autónomos y Pymes</span>
+    <!-- Carta de Ventas -->
+    <article class="max-w-2xl mx-auto px-6 py-16 md:py-28">
+        
+        <header class="mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
+                Cómo tener una web para tu negocio sin que te tomen el pelo (ni te arruines).
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed text-balance">
-                Impulsa tu negocio con una <strong>web profesional por 200€ al año</strong>. Incluimos hosting SSD, dominio propio y optimización para Google. Sin complicaciones técnicas.
+        </header>
+
+        <p>Si eres autónomo o tienes una pequeña empresa, es muy probable que ya te hayan intentado vender "la moto" con esto de internet.</p>
+
+        <p>Por un lado, tienes a las agencias que te piden 3.000€ o más por hacerte una página web. Te hablan de sinergias, de <i>branding</i>, de embudos de conversión y te ponen colorines muy bonitos para justificar la factura.</p>
+
+        <p>Por otro lado, tienes a esas plataformas que te dicen que tu web es "gratis", pero te obligan a pagar 80€ todos los meses de por vida. Si dejas de pagar, te borran del mapa y pierdes tu dominio.</p>
+
+        <p>Es un negocio redondo. Para ellos.</p>
+
+        <p>Hola, soy Hugo.</p>
+
+        <p>Hago páginas web para negocios que quieren cosas sencillas: estar en internet, aparecer en Google cuando alguien les busca y que sus clientes les puedan contactar por WhatsApp o teléfono sin dar vueltas.</p>
+
+        <p>Sin complicaciones. Sin retenerte como rehén.</p>
+
+        <p>Mi propuesta es tan simple que cabe en una línea:</p>
+
+        <p class="font-bold text-2xl md:text-3xl my-10 border-l-4 border-black pl-6 py-2">
+            Desde 700 euros al año.
+        </p>
+
+        <p>Ya está. Ese es el punto de partida.</p>
+
+        <p>Ese precio incluye el diseño de tu web, el dominio propio, el alojamiento en servidores que cargan como un tiro y el mantenimiento técnico para que tú no tengas que tocar ni un solo botón.</p>
+
+        <p>No tienes que saber nada de código. No tienes que preocuparte de si el servidor se cae o si hay que actualizar no sé qué plugin de seguridad. De eso me encargo yo.</p>
+
+        <p>Si buscas una agencia que te haga animaciones 3D y reuniones de tres horas para hablar de la "misión y visión" de tu empresa, no soy tu chico.</p>
+
+        <p>Si buscas una herramienta que funcione, que traiga clientes y que no te dé dolores de cabeza, entonces podemos hablar.</p>
+
+        <p>Para empezar, me escribes. Me cuentas a qué te dedicas y lo ponemos en marcha.</p>
+
+        <p class="mt-12 mb-16 text-xl md:text-2xl">
+            <a href="https://wa.me/34640230147?text=Hola%20Hugo,%20he%20leído%20tu%20web%20y%20quiero%20información." target="_blank" rel="noopener noreferrer" class="cta-link">
+                Puedes escribirme por WhatsApp haciendo clic aquí.
+            </a>
+        </p>
+
+        <p>Un saludo,</p>
+        <p class="font-bold">Hugo Pérez.</p>
+
+        <footer class="mt-20 pt-10 border-t border-gray-200">
+            <p class="text-base italic text-gray-600">
+                <strong>P.D:</strong> El pago se realiza una vez al año. Sin permanencias raras. Si el año que viene decides que no quieres seguir, te llevas tu dominio y tan amigos.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#contacto" class="bg-indigo-600 text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-indigo-700 transition-all focus:ring-4 focus:ring-indigo-200">Quiero mi web profesional</a>
-                <a href="#sectores" class="bg-white border-2 border-slate-200 px-10 py-5 rounded-full font-bold flex items-center hover:bg-slate-50 transition-all text-slate-700">Ver sectores</a>
+            
+            <p class="text-base italic text-gray-600">
+                <strong>P.D 2:</strong> Atiendo por WhatsApp porque es más rápido y directo. <a href="https://wa.me/34640230147?text=Hola%20Hugo,%20he%20leído%20tu%20web%20y%20quiero%20información." class="underline hover:text-black">Es por aquí</a>.
+            </p>
+        </footer>
+
+        <!-- Enlaces Legales (Segunda capa de información) -->
+        <div class="mt-16 flex flex-wrap gap-6 text-xs font-sans text-gray-400 uppercase tracking-widest">
+            <button onclick="openModal('modal-legal')" class="hover:text-black underline">Aviso Legal</button>
+            <button onclick="openModal('modal-privacidad')" class="hover:text-black underline">Privacidad</button>
+            <button onclick="openModal('modal-cookies')" class="hover:text-black underline">Cookies</button>
+        </div>
+        <p class="mt-6 text-[10px] text-gray-300 font-sans tracking-widest uppercase">© 2026 WebParaAutónomos.es</p>
+    </article>
+
+    <!-- MODALES LEGALES -->
+    <div id="modal-legal" class="modal font-sans">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold uppercase tracking-tighter">Aviso Legal</h2>
+                <button onclick="closeAllModals()" class="text-2xl hover:text-red-600">&times;</button>
+            </div>
+            <div class="text-sm space-y-4 text-gray-700">
+                <p><strong>Titular:</strong> Hugo Pérez Mené</p>
+                <p><strong>Lugar:</strong> Zaragoza, España</p>
+                <p><strong>Contacto:</strong> hugoperezmene@gmail.com</p>
+                <p>Este sitio web ofrece servicios de diseño web desde 700€ anuales (impuestos no incluidos). El servicio incluye dominio, hosting SSD y soporte técnico según acuerdo individual.</p>
             </div>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <!-- Beneficios -->
-        <section id="servicios" class="py-24 bg-white" aria-labelledby="servicios-titulo">
-            <div class="max-w-7xl mx-auto px-4">
-                <header class="text-center mb-16">
-                    <h2 id="servicios-titulo" class="text-4xl font-bold text-slate-900 mb-4 text-balance">Especialistas en webs que captan clientes</h2>
-                    <p class="text-lg text-slate-600 font-medium italic">Tecnología de vanguardia para el profesional de hoy.</p>
-                </header>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">SEO Local Integrado</h3>
-                        <p class="text-slate-600 leading-relaxed">Optimizamos tu estructura para que aparezcas en los primeros puestos cuando busquen tus servicios en tu zona geográfica.</p>
-                    </article>
-                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Infraestructura SSD</h3>
-                        <p class="text-slate-600 leading-relaxed">Tu web alojada en servidores de última generación. Rapidez, seguridad SSL y dominio .es incluido en el precio anual.</p>
-                    </article>
-                    <article class="p-10 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Máximo Rendimiento</h3>
-                        <p class="text-slate-600 leading-relaxed">Velocidad de carga inferior a 1 segundo. Cumplimos con los Core Web Vitals de Google para garantizar la mejor experiencia móvil.</p>
-                    </article>
-                </div>
+    <div id="modal-privacidad" class="modal font-sans">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold uppercase tracking-tighter">Privacidad</h2>
+                <button onclick="closeAllModals()" class="text-2xl hover:text-red-600">&times;</button>
             </div>
-        </section>
-
-        <!-- Sectores -->
-        <section id="sectores" class="py-24 bg-slate-900 text-white" aria-labelledby="sectores-titulo">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <h2 id="sectores-titulo" class="text-4xl font-bold mb-16">Especialistas en tu Sector</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3">Reformas y Gremios</h3>
-                        <p class="text-slate-400 text-sm">Fontaneros, electricistas y pintores que necesitan captar llamadas urgentes.</p>
-                    </article>
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3">Salud y Belleza</h3>
-                        <p class="text-slate-400 text-sm">Peluquerías y fisioterapeutas con sistema de cita rápida por WhatsApp.</p>
-                    </article>
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3">Talleres del Motor</h3>
-                        <p class="text-slate-400 text-sm">Especialistas en chapa, pintura y mecánica con enfoque local en Zaragoza.</p>
-                    </article>
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3">Hostelería</h3>
-                        <p class="text-slate-400 text-sm">Menús digitales y reservas para restaurantes y cafeterías locales.</p>
-                    </article>
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3 text-indigo-400">Marca Personal</h3>
-                        <p class="text-slate-400 text-sm">Coaches, profesionales y emprendedores que quieran generar ventas online, o simplemente darles más visibilidad.</p>
-                    </article>
-                    <article class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
-                        <h3 class="font-bold text-xl mb-3">Asesorías y Despachos</h3>
-                        <p class="text-slate-400 text-sm">Abogados y gestorías que buscan transmitir confianza y captar leads cualificados.</p>
-                    </article>
-                </div>
+            <div class="text-sm space-y-4 text-gray-700">
+                <p>Si me contactas por WhatsApp o formulario, usaré tus datos solo para responderte. No vendo tus datos ni te envío publicidad que no hayas pedido.</p>
+                <p>Tienes derecho a borrar tus datos en cualquier momento escribiéndome un correo.</p>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Contacto -->
-        <section id="contacto" class="py-24 bg-indigo-600">
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Inicia tu proyecto digital hoy</h2>
-                    <p class="text-center text-slate-500 mb-8 font-medium">Respuesta garantizada en menos de 24 horas laborables.</p>
-                    <form action="https://formspree.io/f/meepdqbe" method="POST" class="space-y-4">
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <input type="text" name="name" required class="p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-indigo-600 transition-all border border-transparent focus:border-transparent" placeholder="Tu nombre">
-                            <input type="email" name="email" required class="p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-indigo-600 transition-all border border-transparent focus:border-transparent" placeholder="Tu correo electrónico">
-                        </div>
-                        <input type="text" name="business" placeholder="Nombre de tu negocio o sector" class="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-indigo-600 border border-transparent focus:border-transparent">
-                        <textarea name="message" rows="4" required class="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-indigo-600 border border-transparent focus:border-transparent" placeholder="Describe brevemente lo que necesitas para tu web..."></textarea>
-                        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-5 rounded-xl hover:bg-indigo-700 transition-all text-lg shadow-lg hover:shadow-indigo-500/20 active:scale-95 uppercase tracking-wide">Solicitar propuesta gratuita</button>
-                    </form>
-                </div>
+    <div id="modal-cookies" class="modal font-sans">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold uppercase tracking-tighter">Cookies</h2>
+                <button onclick="closeAllModals()" class="text-2xl hover:text-red-600">&times;</button>
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-slate-950 text-slate-500 py-16 px-4 text-center">
-        <address class="not-italic">
-            <p class="text-white font-bold mb-8 text-xl tracking-tight italic">WebPara<span class="text-indigo-500">Autónomos</span></p>
-            <div class="flex flex-wrap justify-center gap-6 mb-8 text-xs uppercase font-bold tracking-widest">
-                <button onclick="openLegalModal('aviso-legal')" class="hover:text-white transition-colors" aria-label="Ver Aviso Legal">Aviso Legal</button>
-                <button onclick="openLegalModal('privacidad')" class="hover:text-white transition-colors" aria-label="Ver Política de Privacidad">Privacidad</button>
-                <button onclick="openLegalModal('cookies')" class="hover:text-white transition-colors" aria-label="Ver Política de Cookies">Cookies</button>
+            <div class="text-sm space-y-4 text-gray-700">
+                <p>Utilizo Google Analytics para saber de dónde vienen las visitas y qué leen. Es información anónima.</p>
             </div>
-            <p class="text-[10px] leading-relaxed max-w-lg mx-auto">
-                © 2026 WebParaAutónomos.es - Soluciones de presencia web para profesionales independientes en Zaragoza y el resto de España. 
-                <br>Desarrollado con enfoque en resultados por <span class="text-slate-300">Hugo Pérez</span>.
-            </p>
-        </address>
-    </footer>
-
-    <!-- Modal Legal -->
-    <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-6" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="bg-white rounded-[2rem] max-w-2xl w-full p-10 max-h-[80vh] overflow-y-auto relative text-left shadow-2xl">
-            <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900" aria-label="Cerrar ventana"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></button>
-            <h3 id="modal-title" class="text-2xl font-bold mb-6 text-slate-900 border-b pb-4"></h3>
-            <div id="modal-content" class="text-slate-600 leading-relaxed text-sm"></div>
         </div>
     </div>
 
     <script>
-        const legalTexts = {
-            'aviso-legal': { title: 'Aviso Legal', content: 'WebParaAutónomos es un servicio de diseño y mantenimiento web ofrecido por Hugo Pérez en Zaragoza. El uso de esta web implica la aceptación de los términos de servicio. El pago de 200€ anuales cubre el diseño inicial, el alojamiento en servidor compartido, el certificado SSL y la gestión del dominio (.es o .com según disponibilidad).' },
-            'privacidad': { title: 'Política de Privacidad', content: 'Los datos facilitados a través del formulario de contacto se utilizarán exclusivamente para el envío de información comercial relacionada con nuestros servicios. No se compartirán con terceros en ningún caso. Usted tiene derecho a acceso, rectificación y supresión enviando un email.' },
-            'cookies': { title: 'Política de Cookies', content: 'Utilizamos cookies técnicas de sesión y análisis anónimo para mejorar la experiencia de navegación. No recopilamos información personal identificable a través de cookies propias.' }
-        };
-        function openLegalModal(type) {
-            document.getElementById('modal-title').innerText = legalTexts[type].title;
-            document.getElementById('modal-content').innerText = legalTexts[type].content;
-            document.getElementById('legal-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+        function closeCookies() { document.getElementById('cookie-banner').style.display = 'none'; }
+        function openModal(id) { 
+            document.getElementById(id).classList.add('modal-active'); 
+            document.body.style.overflow = 'hidden'; 
         }
-        function closeLegalModal() { 
-            document.getElementById('legal-modal').classList.add('hidden'); 
+        function closeAllModals() { 
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('modal-active')); 
             document.body.style.overflow = 'auto';
         }
+        // Cerrar con escape
+        document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeAllModals(); });
     </script>
 </body>
 </html>
